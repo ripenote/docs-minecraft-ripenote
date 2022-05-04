@@ -1,4 +1,4 @@
-# docs-minecraft-ripenote
+# Document pages of Minecraft RipeNote
 <details>
   <summary>日本語</summary>
   Minecraft RipeNoteのドキュメントリポジトリです。<br>
