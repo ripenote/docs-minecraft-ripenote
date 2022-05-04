@@ -1,0 +1,96 @@
+# 表示テスト
+## ナニコレ?
+これは管理者がコンポーネントが正しく描画されているか、奇麗に見えるかをテストするページです。
+
+## ここから下テスト
+
+## 太字/斜字
+**太い**  
+*斜字*
+~取り消し線~
+
+**見出し1は複数あるとバグの原因になるので「表示テスト」が見えていたらOK**
+## 見出し2
+### 見出し3
+#### 見出し4
+##### 見出し5
+###### 見出し6
+
+## リスト
+### 通常リスト
+- リスト1
+    - ネスト リスト1_1
+        - ネスト リスト1_1_1
+        - ネスト リスト1_1_2
+    - ネスト リスト1_2
+- リスト2
+- リスト3
+
+### 番号付きリスト
+1. 番号付きリスト1
+    1. 番号付きリスト1_1
+    1. 番号付きリスト1_2
+1. 番号付きリスト2
+1. 番号付きリスト3
+
+## 引用
+> "Minecraft" is a trademark of Mojang Studios. This website is not affiliated with Mojang Studios.
+> 
+> 当サイトは"Mojang AB"および"Microsoft社"とは無関係であり、記事を利用したことによる如何なる損害も管理人は責任を負いません。
+>> (仮でnapoanさんのを無許可で使っていますが、もうじきWikiから引っ張ってきます)
+
+## コード
+### 基本
+#### 全体
+```
+execute @a ~~~ say テストおっけぃ～
+execute @a[hasitem={item=totem,location=slot.weapon.mainhand}] ~~~ clear totem 1
+```
+#### テキスト内
+これいまのところ`tailwindcss`の設定の関係でできないんだよねぇ
+
+## 水平線
+
+***
+
+___
+
+---
+
+*    *    *
+
+## リンク
+### 基本
+[これ参考にしています](https://qiita.com/tbpgr/items/989c6badefff69377da7)
+
+### 定義参照
+[これ][article]
+と
+[これ][article]
+は一緒
+
+[article]: https://qiita.com/tbpgr/items/989c6badefff69377da7
+
+## GFM
+### リンク
+https://qiita.com/tbpgr/items/989c6badefff69377da7
+
+### 取り消し線
+~~出来てるかな~~
+
+### 表組
+|header1|header2|header3|
+|:--|--:|:--:|
+|align left|align right|align center|
+|a|b|c|
+
+### アンカー
+## menu
+* [to header1](#header1)
+* [to header2](#header2)
+
+{/* some long code */}
+
+[return to menu](#menu)
+### header1
+### header2

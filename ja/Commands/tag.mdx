@@ -1,0 +1,41 @@
+# /tag
+プレイヤーやエンティティにタグを付与/除去し、ターゲットセレクターで識別することができます。
+
+## 使用用途のイメージ
+特定のプレイヤーにタグを付与し、コマンドを実行したら除去する。
+
+### Java Edition
+```
+nameをtargetに追加する
+tag <targets> add <name>
+
+targetに付与されているtagを表示する
+tag <targets> list
+
+nameをtargetから除去する
+tag <targets> remove <name>
+```
+
+### Bedrock Edition
+```
+nameをtargetに追加する
+tag <entity: targets> add <name: string>
+
+targetに付与されているtagを表示する
+tag <entity: targets> list
+
+nameをtargetから除去する
+tag <entity: targets> remove <name: string>
+```
+
+## ターゲットセレクター
+**ターゲットセレクター**で絞り込みことができます。  
+```
+@<エンティティ>[tag=<タグ名>]
+```
+例: **admin**というタグのついた全プレイヤーを指定する  
+`@a[tag=admin]`
+
+## 参考になるかもしれないページ
+ - [Minecraft Fandom Wiki (日本語)](https://minecraft.fandom.com/ja/wiki/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/tag)
+ - [Minecraft Fandom Wiki (英語)](https://minecraft.fandom.com/wiki/Commands/tag)
