@@ -10,3 +10,5 @@
   Minecraft RipeNote's documents repository.<br>
   Please use `.mdx` extension files.
 </details>
+
+![https://github.com/ripenote/docs-minecraft-ripenote/raw/main/.files/temp/system.svg](https://github.com/ripenote/docs-minecraft-ripenote/raw/main/.files/temp/system.svg)
