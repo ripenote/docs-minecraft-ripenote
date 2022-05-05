@@ -16,6 +16,27 @@ kill [ターゲットセレクター]
 ## 権限
 コマンドの実行には、**OP権限/チート許可**が必要です。
 
+## 防具立て/アイテムの削除
+### Java Edition
+#### 防具立て
+(limitとnearestで、最も近くにある防具立て1つを消滅させています)
+```
+kill @e[type=armor_stand,limit=1,sort=nearest]
+```
+#### アイテム
+```
+kill @e[type=item]
+```
+### Bedrock Edition
+#### 防具立て
+```
+kill @e[type=armor_stand,c=1]
+```
+#### アイテム
+```
+kill @e[type=item]
+```
+
 ## 余談
 **Bedrock Edition**では、
 ```
