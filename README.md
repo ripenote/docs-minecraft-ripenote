@@ -1,4 +1,6 @@
 # Document pages of Minecraft RipeNote
+No need to add 2 spaces to break!  
+改行のための2文字のスペース入りません!
 <details>
   <summary>日本語</summary>
   Minecraft RipeNoteのドキュメントリポジトリです。<br>
