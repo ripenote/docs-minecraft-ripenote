@@ -1,0 +1,35 @@
+# /effect
+プレイヤーまたはモブ(エンティティー)に効果を付与することができます。
+
+## 使用例
+棒を持っているプレイヤーにレベル3の透明化効果を与える。
+<details>
+  <summary>⭕ 答え</summary>
+  <div>
+    反復のコマンドブロックを使用します。
+    ```
+    effect give @a[hasitem={item=stick}] invisible 1 1 true
+    ```
+    最後のtrueは効果使用時に出る靄を消すかどうかのブール値です。
+    falseでも構いません。
+  </div>
+</details>
+
+## コマンドの構文
+どのeditionでもエフェクト継続時間は**秒数**でしか指定できません。
+そのため小数点以下の継続時間は設定不可能ですので注意してください。
+効果の指定は[こちら](/ja/Commands/effectlist)を参考にしてください。
+### Java Edition
+```
+effect [ターゲットセレクター] give [効果] (レベル) (継続秒数) <エフェクト時の靄を表示するか true/false>
+```
+### Bedrock Edition
+```
+effect [ターゲットセレクター] give [効果] (レベル) (継続秒数) <エフェクト時の靄を表示するか true/false>
+```
+
+## コマンド例
+### タグ[invisible]が付与されているプレイヤーを透明化する
+```
+effect @a[tag=invisible] give invisible 1 1 true
+```
