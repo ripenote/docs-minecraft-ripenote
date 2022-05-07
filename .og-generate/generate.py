@@ -12,8 +12,8 @@ def add_centered_text(base_img, text, font_path, font_size, font_color, height):
     draw = ImageDraw.Draw(base_img)
     
     # 文字がベース画像からはみ出ないように処理
-    if draw.textsize(text, font=font)[0] > base_img.size[0] - 170:
-        while draw.textsize(text + '…', font=font)[0] > base_img.size[0] - 170:
+    if draw.textsize(text, font=font)[0] > base_img.size[0] - 220:
+        while draw.textsize(text + '…', font=font)[0] > base_img.size[0] - 220:
             text = text[:-1]
         text = text + '…'
 
