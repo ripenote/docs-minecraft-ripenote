@@ -25,6 +25,8 @@ jobs:
       - name: Prepare
         run: |
           pip3 install pillow
+          rm -rf ".og-generate/output"
+          mkdir ".og-generate/output"
       - name: Generate
         run: |
           cd ".og-generate"
