@@ -1,7 +1,9 @@
 # https://zenn.dev/makiart/articles/78d53694e70105
 import os
+import sys
 from PIL import Image, ImageDraw, ImageFont
 
+CONST_REQUEST_PATH = sys.argv[1]
 CONST_CWD = str(os.getcwd() + '/')
 ogp_base_img_path = CONST_CWD + 'base.png'
 font_black_path = CONST_CWD + "NotoSansJP-Regular.otf"
@@ -27,4 +29,4 @@ if __name__ == '__main__':
     base_img = add_centered_text(base_img, 'Created by tamagoez', font_medium_path, 32, (120, 120, 120), 560)
 
     base_img.show()
-    base_img.save('output.png')
+    base_img.save(CONST_CWD + 'output/' + CONST_REQUEST_PATH)
