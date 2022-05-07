@@ -22,6 +22,9 @@ jobs:
       - name: Status
         run: |
           ls -l
+      - name: Prepare
+        run: |
+          pip3 install pillow
       - name: Generate
         run: |
           cd ".og-generate"
