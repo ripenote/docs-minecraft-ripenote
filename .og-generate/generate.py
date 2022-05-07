@@ -1,6 +1,6 @@
 # https://zenn.dev/makiart/articles/78d53694e70105
 import os
-from PIL import Image, ImageFont
+from PIL import Image, ImageDraw, ImageFont
 
 CONST_CWD = str(os.getcwd() + '/')
 ogp_base_img_path = CONST_CWD + 'base.png'
