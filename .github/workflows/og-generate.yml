@@ -29,10 +29,11 @@ jobs:
           mkdir ".og-generate/output"
       - name: Generate English
         run: |
+          now=$(pwd)
           find ./en/ -type f | while read line
           do
           echo "Generating ${line}"
-          cd "./.og-generate"
+          cd "${pwd}/.og-generate"
           python3 generate.py $line "en"
           echo "Finished ${line}"
           echo
