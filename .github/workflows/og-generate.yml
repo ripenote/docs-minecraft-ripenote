@@ -27,13 +27,23 @@ jobs:
           pip3 install pillow
           rm -rf ".og-generate/output"
           mkdir ".og-generate/output"
-      - name: Generate
+      - name: Generate English
         run: |
           cd ".og-generate"
-          find -type f | while read line
+          find ../en/ -type f | while read line
           do
           echo "Generating {line}"
-          python3 generate.py $line
+          python3 generate.py $line "en"
+          echo "Finished {line}"
+          echo
+          done
+      - name: Generate Japanese
+        run: |
+          cd ".og-generate"
+          find ../ja/ -type f | while read line
+          do
+          echo "Generating {line}"
+          python3 generate.py $line "ja"
           echo "Finished {line}"
           echo
           done
