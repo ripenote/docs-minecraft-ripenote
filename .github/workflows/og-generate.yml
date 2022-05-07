@@ -32,9 +32,9 @@ jobs:
           cd ".og-generate"
           find ../en/ -type f | while read line
           do
-          echo "Generating {line}"
+          echo "Generating ${line}"
           python3 generate.py $line "en"
-          echo "Finished {line}"
+          echo "Finished ${line}"
           echo
           done
       - name: Generate Japanese
@@ -42,9 +42,9 @@ jobs:
           cd ".og-generate"
           find ../ja/ -type f | while read line
           do
-          echo "Generating {line}"
+          echo "Generating ${line}"
           python3 generate.py $line "ja"
-          echo "Finished {line}"
+          echo "Finished ${line}"
           echo
           done
       - name: Push
