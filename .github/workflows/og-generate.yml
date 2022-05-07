@@ -20,7 +20,7 @@ jobs:
     # Runs a single command using the runners shell
     - name: Generate
       run: |
-        cd .og-generate
+        cd ".og-generate"
         python3 generate.py
     - name: Push
       run: |
