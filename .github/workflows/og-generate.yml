@@ -30,7 +30,13 @@ jobs:
       - name: Generate
         run: |
           cd ".og-generate"
-          python3 generate.py
+          find -type f | while read line
+          do
+          echo "Generating {line}"
+          python3 generate.py $line
+          echo "Finished {line}"
+          echo
+          done
       - name: Push
         run: |
           git config --global user.name "github-actions[bot]"
