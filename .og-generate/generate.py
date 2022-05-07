@@ -29,4 +29,4 @@ if __name__ == '__main__':
     base_img = add_centered_text(base_img, 'Created by tamagoez', font_medium_path, 32, (120, 120, 120), 560)
 
     base_img.show()
-    base_img.save(CONST_CWD + 'output/' + CONST_REQUEST_PATH)
+    base_img.save(CONST_CWD + 'output/' + os.path.splitext(os.path.basename(CONST_REQUEST_PATH))[0])
