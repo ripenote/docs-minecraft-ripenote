@@ -17,21 +17,20 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Runs a single command using the runners shell
-    - name: Status
-      run: |
-        ls -l
-    - name: Generate
-      run: |
-        cd ".og-generate"
-        python3 generate.py
-    - name: Push
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git pull
-        git add -A
-        git commit -m "Push OG image"
-        git push
-        
-        
+      - uses: actions/checkout@v3
+      # Runs a single command using the runners shell
+      - name: Status
+        run: |
+          ls -l
+      - name: Generate
+        run: |
+          cd ".og-generate"
+          python3 generate.py
+      - name: Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull
+          git add -A
+          git commit -m "Push OG image"
+          git push
