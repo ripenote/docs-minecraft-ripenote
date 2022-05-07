@@ -35,6 +35,6 @@ if __name__ == '__main__':
     os.makedirs(MAKEDIR, exist_ok=True)
     print(f"Made directory: {MAKEDIR}")
     # https://note.nkmk.me/python-os-basename-dirname-split-splitext/
-    SAVEDIR = 'output/' + os.path.splitext(os.path.basename(CONST_REQUEST_PATH))[0] + '.png'
+    SAVEDIR = 'output/' + MAKEDIR + '/' + os.path.splitext(os.path.basename(CONST_REQUEST_PATH))[0] + '.png'
     base_img.save(CONST_CWD + SAVEDIR)
     print(f"Saved: {SAVEDIR}")
