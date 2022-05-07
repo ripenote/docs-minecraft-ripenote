@@ -3,8 +3,8 @@
 from PIL import Image, ImageFont
 
 ogp_base_img_path = 'base.png'
-font_black_path = "black font path"
-font_medium_path = "medium font path"
+font_black_path = "NotoSansJP-Regular.otf"
+font_medium_path = "NotoSansJP-Bold.otf"
 
 def add_centered_text(base_img, text, font_path, font_size, font_color, height):
     font = ImageFont.truetype(font_path, font_size)
