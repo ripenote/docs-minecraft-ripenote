@@ -25,8 +25,8 @@ def add_centered_text(base_img, text, font_path, font_size, font_color, height):
 
 if __name__ == '__main__':
     base_img = Image.open(ogp_base_img_path).copy()
-    base_img = add_centered_text(base_img, '/execute コマンド', font_black_path, 100, (64, 64, 64), 380)
-    base_img = add_centered_text(base_img, 'Created by tamagoez', font_medium_path, 50, (120, 120, 120), 560)
+    base_img = add_centered_text(base_img, '/execute コマンド', font_black_path, 400, (64, 64, 64), 380)
+    base_img = add_centered_text(base_img, 'Created by tamagoez', font_medium_path, 250, (120, 120, 120), 560)
 
     base_img.show()
     print(CONST_REQUEST_PATH)
