@@ -1,4 +1,5 @@
 # Document pages of Minecraft RipeNote
+[![OG image generate](https://github.com/ripenote/docs-minecraft-ripenote/actions/workflows/og-generate.yml/badge.svg)](https://github.com/ripenote/docs-minecraft-ripenote/actions/workflows/og-generate.yml)  
 No need to add 2 spaces to break!  
 改行のための2文字のスペース入りません!
 <details>
