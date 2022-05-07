@@ -31,6 +31,10 @@ if __name__ == '__main__':
     base_img.show()
     print(CONST_REQUEST_PATH)
     # https://note.nkmk.me/python-os-mkdir-makedirs/
-    os.makedirs(os.path.dirname(CONST_REQUEST_PATH), exist_ok=True)
+    MAKEDIR = os.path.dirname(CONST_REQUEST_PATH
+    os.makedirs(MAKEDIR, exist_ok=True)
+    print(f"Made directory: {MAKEDIR}")
     # https://note.nkmk.me/python-os-basename-dirname-split-splitext/
-    base_img.save(CONST_CWD + 'output/' + os.path.splitext(os.path.basename(CONST_REQUEST_PATH))[0] + '.png')
+    SAVEDIR = 'output/' + os.path.splitext(os.path.basename(CONST_REQUEST_PATH))[0] + '.png'
+    base_img.save(CONST_CWD + SAVEDIR)
+    print(f"Saved: {SAVEDIR}")
