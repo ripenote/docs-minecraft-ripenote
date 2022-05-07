@@ -2,7 +2,7 @@
 import os
 from PIL import Image, ImageFont
 
-CONST_CWD = str(os.getcwd())
+CONST_CWD = str(os.getcwd() + '/')
 ogp_base_img_path = CONST_CWD + 'base.png'
 font_black_path = CONST_CWD + "NotoSansJP-Regular.otf"
 font_medium_path = CONST_CWD + "NotoSansJP-Bold.otf"
