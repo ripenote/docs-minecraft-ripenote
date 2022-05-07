@@ -1,10 +1,11 @@
 # https://zenn.dev/makiart/articles/78d53694e70105
-
+import os
 from PIL import Image, ImageFont
 
-ogp_base_img_path = 'base.png'
-font_black_path = "./NotoSansJP-Regular.otf"
-font_medium_path = "./NotoSansJP-Bold.otf"
+CONST_CWD = str(os.getcwd())
+ogp_base_img_path = CONST_CWD + 'base.png'
+font_black_path = CONST_CWD + "NotoSansJP-Regular.otf"
+font_medium_path = CONST_CWD + "NotoSansJP-Bold.otf"
 
 def add_centered_text(base_img, text, font_path, font_size, font_color, height):
     font = ImageFont.truetype(font_path, font_size)
