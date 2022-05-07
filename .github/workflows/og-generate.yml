@@ -34,7 +34,7 @@ jobs:
           do
           echo "Generating ${line}"
           cd "${now}/.og-generate"
-          python3 generate.py ${line:1} "en"
+          python3 generate.py ${line:2} "en"
           echo "Finished ${line}"
           echo
           done
@@ -45,7 +45,7 @@ jobs:
           do
           echo "Generating ${line}"
           cd "${now}/.og-generate"
-          python3 generate.py ${line:1} "ja"
+          python3 generate.py ${line:2} "ja"
           echo "Finished ${line}"
           echo
           done
