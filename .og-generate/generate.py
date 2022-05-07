@@ -14,8 +14,8 @@ def add_centered_text(base_img, text, font_path, font_size, font_color, height):
     draw = ImageDraw.Draw(base_img)
     
     # 文字がベース画像からはみ出ないように処理
-    if draw.textsize(text, font=font)[0] > base_img.size[0] - 220:
-        while draw.textsize(text + '…', font=font)[0] > base_img.size[0] - 220:
+    if draw.textsize(text, font=font)[0] > base_img.size[0] - 100:
+        while draw.textsize(text + '…', font=font)[0] > base_img.size[0] - 100:
             text = text[:-1]
         text = text + '…'
 
@@ -29,4 +29,7 @@ if __name__ == '__main__':
     base_img = add_centered_text(base_img, 'Created by tamagoez', font_medium_path, 32, (120, 120, 120), 560)
 
     base_img.show()
+    # https://note.nkmk.me/python-os-mkdir-makedirs/
+    os.makedirs(os.path.dirname(CONST_REQUEST_PATH), exist_ok=True)
+    # https://note.nkmk.me/python-os-basename-dirname-split-splitext/
     base_img.save(CONST_CWD + 'output/' + os.path.splitext(os.path.basename(CONST_REQUEST_PATH))[0] + '.png')
