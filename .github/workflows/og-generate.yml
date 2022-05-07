@@ -32,7 +32,7 @@ jobs:
           find ./en/ -type f | while read line
           do
           echo "Generating ${line}"
-          cd ".og-generate"
+          cd "./.og-generate"
           python3 generate.py $line "en"
           echo "Finished ${line}"
           echo
@@ -42,7 +42,7 @@ jobs:
           find ./ja/ -type f | while read line
           do
           echo "Generating ${line}"
-          cd ".og-generate"
+          cd "./.og-generate"
           python3 generate.py $line "ja"
           echo "Finished ${line}"
           echo
