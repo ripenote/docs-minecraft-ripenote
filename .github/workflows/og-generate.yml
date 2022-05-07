@@ -30,22 +30,22 @@ jobs:
       - name: Generate English
         run: |
           now=$(pwd)
-          find /en/ -type f | while read line
+          find ./en/ -type f | while read line
           do
           echo "Generating ${line}"
           cd "${now}/.og-generate"
-          python3 generate.py $line "en"
+          python3 generate.py ${line:1} "en"
           echo "Finished ${line}"
           echo
           done
       - name: Generate Japanese
         run: |
           now=$(pwd)
-          find /ja/ -type f | while read line
+          find ./ja/ -type f | while read line
           do
           echo "Generating ${line}"
           cd "${now}/.og-generate"
-          python3 generate.py $line "ja"
+          python3 generate.py ${line:1} "ja"
           echo "Finished ${line}"
           echo
           done
