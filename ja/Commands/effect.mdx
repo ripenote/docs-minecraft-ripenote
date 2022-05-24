@@ -8,7 +8,7 @@
   <div>
     反復のコマンドブロックを使用します。
     ```
-    effect give @a[hasitem={item=stick}] invisible 1 1 true
+    effect give @a[hasitem={item=stick}] invisible 1 3 true
     ```
     最後のtrueは効果使用時に出る靄を消すかどうかのブール値です。
     falseでも構いません。
@@ -19,17 +19,28 @@
 どのeditionでもエフェクト継続時間は**秒数**でしか指定できません。
 そのため小数点以下の継続時間は設定不可能ですので注意してください。
 効果の指定は[こちら](/ja/Commands/effectlist)を参考にしてください。
-### Java Edition
+()の値は省略可能です。
+継続時間はデフォルトで**30秒**、レベルはデフォルトで**0**に設定されています。
+<エフェクト時の靄を表示しない true/false>は、**true**にすることで、**エフェクト実行時の靄**が**非表示**になります。
+この値も設定は不必要です。
+### 効果を付与する
+#### Java Edition
 ```
-effect [ターゲットセレクター] give [効果] (レベル) (継続秒数) <エフェクト時の靄を表示するか true/false>
+effect [ターゲットセレクター] [効果] (継続秒数) (レベル) <エフェクト時の靄を表示しない true/false>
 ```
-### Bedrock Edition
+#### Bedrock Edition
 ```
-effect [ターゲットセレクター] give [効果] (レベル) (継続秒数) <エフェクト時の靄を表示するか true/false>
+effect [ターゲットセレクター] [効果] (継続秒数) (レベル) <エフェクト時の靄を表示しない true/false>
 ```
 
 ## コマンド例
-### タグ[invisible]が付与されているプレイヤーを透明化する
+### 全員に採掘速度上昇/勤勉(レベル5)のエフェクトを1分つける
 ```
-effect @a[tag=invisible] give invisible 1 1 true
+effect @a haste 60 1 true
+```
+
+### タグ[invisible]が付与されているプレイヤーを透明化する
+これは**リピーター(反復)のコマンドブロック**で**20tick以内毎**に実行するようにしてください。
+```
+effect @a[tag=invisible] invisible 1 1 true
 ```
